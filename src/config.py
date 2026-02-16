@@ -1,0 +1,4 @@
+DATA_FOLDER = "data"
+COLLECTION_NAME = "cvs"
+VECTOR_SIZE = 384
+DB_PATH = "storage"
