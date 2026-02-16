@@ -4,7 +4,7 @@ from qdrant_client import QdrantClient
 from .config import COLLECTION_NAME, DB_PATH
 from .embed import embed_text
 
-THRESHOLD = 0.4
+THRESHOLD = 0.0
 
 def run_search():
     client = QdrantClient(path=DB_PATH)
@@ -33,7 +33,8 @@ def run_search():
 
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
-    final = [(cv_id, score) for cv_id, score in ranked if score >= THRESHOLD]
+    final = ranked
+
 
     matching_ids = [cv_id for cv_id, _ in final]
 
