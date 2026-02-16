@@ -30,6 +30,10 @@ def run_indexing():
         if file.endswith(".pdf"):
             cv_id = file.replace(".pdf", "")
             text = extract_text(os.path.join(DATA_FOLDER, file))
+            print(f"\n--- DEBUG TEXT FOR {cv_id} ---")
+            print(text.lower())
+            print("Does it contain 'reactjs'? ->", "reactjs" in text.lower())
+            print("---------------------------------------------------\n")
             chunks = chunk_text(text)
             vectors = embed_text(chunks)
 
@@ -39,7 +43,11 @@ def run_indexing():
                     PointStruct(
                         id=str(uuid.uuid4()),
                         vector=vector,
-                        payload={"cv_id": cv_id},
+                        payload={
+                        "cv_id": cv_id,
+                        "text": chunk,
+                        "full_text": text.lower()
+},
                     )
                 )
 
