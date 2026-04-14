@@ -28,6 +28,7 @@ No external APIs required.
 <img width="3150" height="367" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/663d0dc5-a844-4426-8e11-aa1cf0ab43b3" />
 
 ---
+```
 
 ## 📁 Project Structure
 
@@ -47,7 +48,7 @@ ai_recruiter/
 └── README.md
 
 
-
+```
 ---
 
 ## ⚙️ Installation
