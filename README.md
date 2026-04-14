@@ -24,9 +24,8 @@ No external APIs required.
 ---
 
 ## 🧠 Architecture
-
-CV Files → Text Extraction → Chunking → Embeddings → Vector DB  
-Recruiter Query → Embedding → Similarity Search → Ranked Results
+              
+<img width="3150" height="367" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/663d0dc5-a844-4426-8e11-aa1cf0ab43b3" />
 
 ---
 
